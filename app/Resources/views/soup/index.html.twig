@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Soups list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Litr</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for soup in soups %}
+            <tr>
+                <td><a href="{{ path('admin_soup_show', { 'id': soup.id }) }}">{{ soup.id }}</a></td>
+                <td>{{ soup.name }}</td>
+                <td>{{ soup.litr }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('admin_soup_show', { 'id': soup.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('admin_soup_edit', { 'id': soup.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_soup_new') }}">Create a new soup</a>
+        </li>
+    </ul>
+{% endblock %}
