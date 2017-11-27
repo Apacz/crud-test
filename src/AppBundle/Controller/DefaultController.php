@@ -25,7 +25,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/{id}", name="homepage_dish")
+     * @Route("/dish/{id}", name="homepage_dish")
      */
     public function dishAction(Dish $dish)
     {

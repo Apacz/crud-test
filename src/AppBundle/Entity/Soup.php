@@ -98,7 +98,5 @@ class Soup
     {
         return $this->name. ' l.: '.$this->litr;
     }
-
-
 }
 

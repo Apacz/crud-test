@@ -26,7 +26,20 @@
                         <li>
                             <a href="{{ path('admin_soup_edit', { 'id': soup.id }) }}">edit</a>
                         </li>
+                    </utr>
+                <td><a href="{{ path('admin_soup_show', { 'id': soup.id }) }}">{{ soup.id }}</a></td>
+                <td>{{ soup.name }}</td>
+                <td>{{ soup.litr }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('admin_soup_show', { 'id': soup.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('admin_soup_edit', { 'id': soup.id }) }}">edit</a>
+                        </li>
                     </ul>
+                </td>l>
                 </td>
             </tr>
         {% endfor %}
